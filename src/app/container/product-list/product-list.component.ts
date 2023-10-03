@@ -265,8 +265,7 @@ export class ProductListComponent {
       price: 30,
       is_in_inventory: false,
       items_left: 4,
-      imageURL:
-        'https://cdn.shopify.com/s/files/1/0016/0074/9623/products/BRIDGPORT_ADVICE-BLACK_1_800x800.jpg?v=1576567903',
+      imageURL: 'https://images.vans.com/is/image/Vans/MV122M-HERO?$583x583$',
       slug: 'bridgport-advice',
     },
     {
@@ -283,8 +282,7 @@ export class ProductListComponent {
       discountPrice: 45,
       is_in_inventory: true,
       items_left: 5,
-      imageURL:
-        'https://cdn.shopify.com/s/files/1/0016/0074/9623/products/Beck-Black_800x800.jpg',
+      imageURL: 'https://images.vans.com/is/image/Vans/MV122M-HERO?$583x583$',
       slug: 'beck',
     },
     {
@@ -301,7 +299,7 @@ export class ProductListComponent {
       is_in_inventory: true,
       items_left: 6,
       imageURL:
-        'https://cdn.shopify.com/s/files/1/0016/0074/9623/products/fester-Tan_800x800.jpg?v=1575537531',
+        'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg',
       slug: 'fester',
     },
     {
@@ -318,7 +316,7 @@ export class ProductListComponent {
       is_in_inventory: true,
       items_left: 7,
       imageURL:
-        'https://cdn.shopify.com/s/files/1/0016/0074/9623/products/PIXEL-TAN_800x800.jpg?v=1577420506',
+        'https://cdn.shopify.com/s/files/1/0016/0074/9623/products/Austin-Coffee_800x800.jpg?v=1574772988',
       slug: 'pixel',
     },
     {
@@ -560,8 +558,7 @@ export class ProductListComponent {
       price: 70,
       is_in_inventory: true,
       items_left: 3,
-      imageURL:
-        "https://assets.reebok.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/7599294868804d78a1b1ab6f01718a5e_9366/Club_C_Revenge_Men's_Shoes_White_FV9877_01_standard.jpg",
+      imageURL: 'https://images.vans.com/is/image/Vans/MV122M-HERO?$583x583$',
       slug: 'club-c-revenge-mens',
     },
     {
@@ -598,4 +595,18 @@ export class ProductListComponent {
       slug: 'michael-feburary-sk8-hi',
     },
   ];
+
+  totalProductCount = this.products.length;
+  totalProductInStock = this.products.filter((p) => p.is_in_inventory === true)
+    .length;
+  totalProductOutOfStock = this.products.filter(
+    (p) => p.is_in_inventory === false
+  ).length;
+
+  selectedFilterRadioButton: string = 'all'
+  onFilterChanged(value: string){
+
+    this.selectedFilterRadioButton = value
+
+  }
 }
