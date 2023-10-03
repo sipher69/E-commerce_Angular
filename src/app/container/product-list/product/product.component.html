@@ -14,10 +14,10 @@
     <img [src]="product.imageURL" class="ekart--product--image">
   </div>
   <div class="ekart--add--to--price">
-    PRICE
+    {{product.price}}
   </div>
 
-  <div class="ekart--product--name">{{product.price}}</div>
+  <div class="ekart--product--name">{{product.name}}</div>
   <div class="ekart--product--category">{{product.gender}} . {{product.category}} . {{product.brand}}</div>
   <div class="ekart--product--available-colors">{{product.color.length}} Colors . Best Seller</div>
   <div class="ekart--product--in--stock"
