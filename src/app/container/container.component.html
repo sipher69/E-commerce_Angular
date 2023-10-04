@@ -4,4 +4,28 @@
   <product-list [searchText]="searchText" #productListComponent></product-list>
 
   <product-detail *ngIf="productListComponent.selectedProduct" [productListComp]="ProductListComponent"></product-detail>
+
+  <div class="ekart-featured-products">
+    <div class="ekart-featured-product-heading">
+      <h1>Latest Arrival In Popular Brands</h1>
+    </div>
+
+    <featured-brands>
+      <h3 class="title">New Arrival In Nike</h3>
+      <button class="call-to-action">Show New Arrivals In Nike</button>
+
+    </featured-brands>
+    <featured-brands>
+      <h3 class="title">New Arrival In Adidas</h3>
+      <button class="call-to-action">Show New Arrivals In Adidas</button>
+
+    </featured-brands>
+    <featured-brands>
+      <h3 class="title">New Arrival In Reebok</h3>
+      <button class="call-to-action">Show New Arrivals In Reebok</button>
+
+    </featured-brands>
+
+
+  </div>
 </div>
