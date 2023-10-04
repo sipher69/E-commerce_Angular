@@ -1,0 +1,59 @@
+<div class="ekart--product--details--info scroll">
+  <div class="ekart-product-detail-close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+  </div>
+  <div class="ekart-product-detail-image">
+      <img [src]="product.imageURL">
+  </div>
+
+  <div class="ekart-product-detail">
+      <div class="ekart-product-detail-name">
+          <h2>{{product.name}}</h2>
+      </div>
+      <div class="ekart-product-detail-gbc">
+          <span>{{product.gender}}</span>
+          <span>{{product.brand}}</span>
+          <span>{{product.category}}</span>
+      </div>
+      <div class="ekart-product-detail-price">
+          <p>
+              <b>Price Each Pair:</b>
+              <span style="background-color: red; color:white" *ngIf="product.discountPrice"><s>${{product.discountPrice}}</s></span>
+              <span style="background-color: green; color:white">${{product.price}}</span> (Inclusive of all taxes)
+          </p>
+      </div>
+      <div class="ekart-product-detail-size">
+          <div style="padding: 5px 0px;border-bottom: #ccc 2px solid">
+              <h4>Available Size</h4>
+          </div>
+
+          <diV style="margin-top: 20px" *ngFor="let prod of product.size">
+              <span class="ekart-product-detail-available-size">{{prod}}</span>
+          </diV>
+
+      </div>
+
+      <div class="ekart-product-detail-color">
+          <div style="padding: 5px 0px;border-bottom: #ccc 2px solid">
+              <h4>Available Color</h4>
+          </div>
+          <diV style="margin-top: 20px;" *ngFor="let prod of product.color">
+              <span class="ekart-product-detail-available-color" [style.background]="prod"></span>
+
+          </diV>
+      </div>
+
+      <div class="ekart-product-detail-desc">
+          <div style="padding: 5px 0px;border-bottom: #ccc 2px solid">
+              <h4>Product Description</h4>
+          </div>
+          <div style="margin-top: 20px">
+              <p>{{product.description}}</p>
+          </div>
+      </div>
+  </div>
+  <div class="ekart-product-detail-addtoCart">
+      <button class="btn-add-to-cart">ADD TO CART</button>
+  </div>
+</div>
+<div class="overlay"></div>
